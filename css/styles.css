@@ -1,0 +1,117 @@
+/* Prog Industries: website
+ * version: 0.1
+ * desc: css stylings for general use throughout website
+ */
+
+@media (min-width: 800px) {	
+	body {
+	}
+
+	#wrapper {
+		width: calc(100vw - 10px);
+	}
+
+	::-webkit-scrollbar {
+	    width: 10px;
+	}
+	 
+	::-webkit-scrollbar-track {
+	    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+	    -webkit-border-radius: 0px;
+	    border-radius: 0px;
+	}
+	 
+	::-webkit-scrollbar-thumb {
+	    -webkit-border-radius: 0px;
+	    border-radius: 0px;
+	    background: rgba(255,0,0,0.8); 
+	    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+	}
+	::-webkit-scrollbar-thumb:window-inactive {
+		background: rgba(255,0,0,0.4); 
+	}
+
+	#header {
+		width: 100%;
+		height: 100px;
+		background-color: blue;
+		position: fixed;
+		transition: height 0.5s;
+		z-index: 100;
+	}
+
+	#mainer {
+		width: 100%;
+		min-height: 800px;
+		background-color: pink;
+	}
+
+	#splash {
+		width: 100%;
+		height: calc(100vh - 100px);
+		background-color: indigo;
+		position: static;
+	}
+
+	#splashBox {
+		z-index: 5;
+		width: 50%;
+		height: 50%;
+		top: calc(100px + 12.5%);
+		left: 25%;
+		background-color: red;
+		display: block;
+		position: absolute;
+	}
+
+	#splashBoxContent {
+		width: 80%;
+		height: 50%;
+		top: 10%;
+		left: 10%;
+		background-color: yellow;
+		display: block;
+		position: absolute;
+	}
+
+	#splashBoxHeader {
+		width: 100%;
+		height: 50%;
+		background-color: pink;
+	}
+
+	#splashBoxText {
+		width: 100%;
+		height: 50%;
+		background-color: orange;
+	}
+
+	#splashBoxButton {
+		width: 80%;
+		height: 20%;
+		top: 70%;
+		left: 10%;
+		background-color: blue;
+		display: block;
+		position: absolute;
+	}
+
+	#content {
+		width: 100%;
+		height: 700px;
+		background-color: orange;
+	}
+
+	#footer {
+		width: 100%;
+		height: 200px;
+		background-color: purple;
+	}
+
+	.footerColumn {
+		width: calc(100% / 3);
+		height: 100%;
+		background-color: white;
+		float: left;
+	}
+}
