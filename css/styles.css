@@ -11,9 +11,13 @@
 }
 
 @font-face {
-	font-family: "Rajdhani";
+	font-family: "Rajdhani-Bold";
 	src: url("/fonts/Rajdhani/Rajdhani-Bold.ttf");
-	font-weight: bold;
+}
+
+@font-face {
+	font-family: "Rajdhani-Light";
+	src: url("/fonts/Rajdhani/Rajdhani-Light.ttf");
 }
 
 @font-face {
@@ -22,9 +26,13 @@
 }
 
 @font-face {
-	font-family: "Source";
+	font-family: "Source-Bold";
 	src: url("/fonts/Source_Sans_Pro/SourceSansPro-Bold.ttf");
-	font-weight: bold;
+}
+
+@font-face {
+	font-family: "Source-LightItalic";
+	src: url("/fonts/Source_Sans_Pro/SourceSansPro-LightItalic.ttf");
 }
 
 @media (min-width: 800px) {	
@@ -99,6 +107,7 @@
 	.dropdown {
 	    position: relative;
 	    display: inline-block;
+	    transition: all 0.5s;
 	}
 
 	.dropdown-content {
@@ -106,10 +115,11 @@
 	    position: absolute;
 	    background-color: rgba(255, 255, 255, 0.5);
 	    font-family: "Source";
-	    font-size: 16px;
+	    font-size: 20px;
 	    width: calc(100vw / 8);
 	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	    z-index: 1;
+	    transition: all 0.5s;
 	}
 
 	.dropdown-content a {
@@ -120,7 +130,10 @@
 	    display: block;
 	}
 
-	.dropdown-content a:hover {background-color: #f1f1f1}
+	.dropdown-content a:hover {
+		background-color: #f1f1f1;
+		opacity: 0.8;
+	}
 
 	.dropdown:hover .dropdown-content {
 	    display: block;
@@ -143,6 +156,11 @@
 		margin-left: calc(100% / 4);
 		opacity: 0.8;
 		transition: all 0.5s;
+		cursor: pointer;
+	}
+
+	#headerButton i:hover {
+		color: rgba(40,40,150,1);
 	}
 
 	#mainer {
@@ -339,8 +357,33 @@
 		text-align: center;
 		font-family: "Source";
 		color: #333333;
-		font-size: 28px;
+		font-size: 2vw;
 		line-height: 48px;
+	}
+
+	#statement {
+		width: calc(80% - 50px);
+		height: calc(70% - 50px);
+		font-family: "Source-LightItalic";
+		font-size: 3.5vw;
+		line-height: 72px;
+		color: #888888;
+		position: absolute;
+		padding: 25px;
+		
+	}
+
+	#statementName {
+		width: calc(80% - 25px);
+		height: calc(20% - 25px);
+		margin-top: 25%;
+		padding-right: 25px;
+		padding-top: 20px;
+		font-family: "Rajdhani-Light";
+		text-align: right;
+		color: #333333;
+		font-size: 48px;
+		position: absolute;
 	}
 
 	.contentParallaxBackground {
@@ -352,16 +395,97 @@
 	    background-size: cover;
 	}
 
+	.contentParallaxBackground h1 {
+		text-align: center;
+		font-family: "Rajdhani";
+		font-size: 72px;
+		font-weight: normal;
+		color: #dddddd;
+	}
+
+	.contentParallaxBackground h2 {
+		text-align: center;
+		font-family: "Rajdhani-Light";
+		font-size: 48px;
+		color: #dddddd;
+	}
+
+	.contactBlock {
+
+	}
+
+	.contactBlock h1 {
+		text-align: center;
+		font-family: "Rajdhani";
+		font-size: 72px;
+		font-weight: normal;
+		color: #333333;
+	}
+
+	.contactBlock p {
+		text-align: left;
+		font-family: "Rajdhani-Light";
+		font-size: 28px;
+		color: #333333;
+	}
+
+	#message {
+		width: 100%;
+		min-height: 200px;
+		font-family: "Source";
+		font-size: 18px;
+		font-weight: normal;
+	    padding: 12px;
+	    border: 1px solid #ccc;
+	    border-radius: 4px;
+	    box-sizing: border-box;
+	    margin-top: 6px;
+	    margin-bottom: 16px;
+	    resize: vertical;
+	}
+
+	#submit {
+		width: 20%;
+		height: 50px;
+		margin-top: 10px;
+		font-family: "Rajdhani";
+		color: white;
+		font-weight: bold;
+		font-size: 24px;
+		background-color: rgba(50, 50, 140, 0.8);
+		transition: all 0.5s;
+		border-radius: 0px;
+		border: none;
+	}
+
+	#submit:hover {
+		background-color: rgba(50, 50, 140, 1);
+		font-size: 28px;
+		border-radius: 10px;
+	}
+
 	#footer {
 		width: 100%;
-		height: 200px;
+		height: 400px;
 		position: relative;
 	}
 
 	.footerColumn {
-		width: calc(100% / 3);
-		height: 100%;
+		width: calc(100% / 3 - 50px);
+		height: calc(100% - 50px);
 		background-color: black;
 		float: left;
+		padding: 25px;
+	}
+
+	.footerColumn h2 {
+		color: white;
+		font-family: "Rajdhani";
+		font-weight: normal;
+	}
+
+	.footerColumn p {
+		color: white;
+		font-family: "Source";
 	}
 }
