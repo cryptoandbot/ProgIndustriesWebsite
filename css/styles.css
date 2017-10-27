@@ -3,6 +3,8 @@
  * desc: css stylings for general use throughout website
  */
 
+@import url("/css/normalize.css");
+
 @font-face {
 	font-family: "Rajdhani";
 	src: url("/fonts/Rajdhani/Rajdhani-Regular.ttf");
@@ -72,6 +74,7 @@
 		margin-top: 25px;
 		padding-left: 50px;
 		float: left;
+		transition: all 0.5s;
 	}
 
 	#headerNav {
@@ -90,6 +93,7 @@
 	    font-size: 24px;
 	    border: none;
 	    cursor: pointer;
+	    transition: all 0.5s;
 	}
 
 	.dropdown {
@@ -132,6 +136,15 @@
 		float: left;
 	}
 
+	#headerButton i {
+		font-size: 50px;
+		color: white;
+		margin-top: 25px;
+		margin-left: calc(100% / 4);
+		opacity: 0.8;
+		transition: all 0.5s;
+	}
+
 	#mainer {
 		width: 100%;
 		min-height: 800px;
@@ -139,9 +152,9 @@
 
 	#splash {
 		width: 100%;
-		height: calc(100vh - 100px);
+		height: 100vh;
 		position: static;
-		background: url("/images/splash-background.jpg");
+		background: url("/images/distant_nebula.jpg");
 		box-shadow: 0 5px 50px #000000;
 	}
 
@@ -152,7 +165,7 @@
 		top: calc(100px + 12.5%);
 		left: 25%;
 		background-color: rgba(0, 0, 0, 0.8);
-		background: url("/images/pattern2.png");
+		background: url("/images/pattern1.png");
 		border-radius: 20px;
 		display: block;
 		position: absolute;
@@ -230,12 +243,119 @@
 
 	#content {
 		width: 100%;
-		height: 700px;
+		min-height: 700px;
+	}
+
+	.contentBlock {
+		width: calc(100% - 20vw);
+		min-height: 500px;
+		display: block;
+		position: relative;
+		display: inline-block;
+		padding-top: 50px;
+		padding-bottom: 25px; 
+		padding-left: 10vw;
+		padding-right: 10vw;
+	}
+
+	.contentTitle {
+		width: 100%;
+		height: 100px;
+		text-align: center;
+		font-family: "Rajdhani";
+		font-size: 72px;
+		color: #333333;
+	}
+
+	.contentBubbleBlock {
+		width: 100%;
+		height: 500px;
+		margin-top: 25px;
+		margin-bottom: 25px;
+	}
+
+	.contentBubble {
+		width: calc(100% / 3 - 5%);
+		height: 45%;
+		padding: 2.5%;
+		float: left;
+	}
+
+	.contentBubbleInside {
+		width: 100%;
+		height: 100%;
+		text-align: center;
+	}
+
+	.contentBubbleInside i {
+		margin-top: 20px;
+		font-size: 72px;
+		text-shadow: 2px 2px 10px #333333;
+		color: #333333;
+	}
+
+	.contentBubbleInside p {
+		text-align: center;
+		font-family: "Source";
+		color: #333333;
+		font-size: 24px;
+	}
+
+	.callToAction {
+		box-shadow: 0 5px 50px #000000;
+		width: 100%;
+		height: 600px;
+		padding: 0;
+	}
+
+	#callToActionLarge {
+		width: 65%;
+		height: 100%;
+		position: absolute;
+		background: url('/images/galaxy_thin.jpg');
+	}
+
+	#callToActionSmall {
+		width: calc(35% - 50px);
+		height: calc(100% - 50px);
+		margin-left: 65%;
+		position: absolute;
+		background-color: #eeeeee;
+		padding: 25px;
+	}
+
+	#callToActionSmall h1 {
+		width: 100%;
+		text-align: center;
+		font-family: "Rajdhani";
+		color: #333333;
+		font-weight: normal;
+		font-size: 48px;
+	}
+
+	#callToActionSmall p {
+		width: 100%;
+		margin-top: 25px;
+		text-align: center;
+		font-family: "Source";
+		color: #333333;
+		font-size: 28px;
+		line-height: 48px;
+	}
+
+	.contentParallaxBackground {
+	    background-image: url("/images/dusk_starry_sky.jpg");
+	    height: 100%; 
+	    background-attachment: fixed;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
 	}
 
 	#footer {
 		width: 100%;
 		height: 200px;
+		position: relative;
 	}
 
 	.footerColumn {
