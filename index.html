@@ -8,43 +8,19 @@ desc: landing page
 	<head>
 		<title>Prog Industries</title>
 		<script src="/js/jquery-3.2.1.min.js"></script>
-		<script src="/js/index.js?version=1"></script>
+		<script src="/js/index.js"></script>
 		<link rel="stylesheet" href="/css/normalize.css">
 		<link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="/css/styles.css?version=2">
+		<link rel="stylesheet" href="/css/styles.css">
 	</head>
 	<body>
 		<div id="wrapper">
 			<div id="header">
-				<div id="headerLogo">PROG INDUSTRIES</div>
-				<div id="headerNav">
-					<div class="dropdown">
-						<button class="dropbtn">Products</button>
-						<div class="dropdown-content">
-							<a href="#">Biomedicine</a>
-							<a href="#">Technology</a>
-							<a href="#">Future</a>
-						</div>
-					</div>
-					<div class="dropdown">
-						<button class="dropbtn">About</button>
-						<div class="dropdown-content">
-							<a href="#">Our Vision</a>
-							<a href="#">Our Team</a>
-							<a href="#">Our Future</a>
-						</div>
-					</div>
-					<div class="dropdown">
-						<button class="dropbtn">Contact</button>
-						<div class="dropdown-content">
-							<a href="#">Opportunities</a>
-							<a href="#">Contact</a>
-						</div>
-					</div>
-				</div>
-				<div id="headerButton">
-					<i class="fa fa-rocket" aria-hidden="true"></i>
-				</div>
+				<script>
+					$(function() {
+						$('#header').load('header.html');
+					})
+				</script>
 			</div>
 			<div id="mainer">
 				<div id="splash">
@@ -61,6 +37,7 @@ desc: landing page
 							<button>EXPLORE</button>
 						</div>
 					</div>
+					<img id="rocketImage" src="images/rocket.png">
 				</div>
 				<div id="content">
 					<div class="contentBlock">
@@ -118,7 +95,7 @@ desc: landing page
 						<div id="statementName"> ~ Erin SARICILAR (CEO)
 						</div>
 					</div>
-					<div class="contentBlock contentParallaxBackground">
+					<div class="contentBlock contentParallaxBackground" style="background-image: url('/images/dusk_starry_sky.jpg')">
 						<h1>Neverending Opportunities</h1>
 						<h2>. . . Vision . . .</h2>
 						<h2>. . . Creation . . .</h2>
@@ -135,18 +112,11 @@ desc: landing page
 				</div>
 			</div>
 			<div id="footer">
-				<div class="footerColumn">
-					<h2>About:</h2>
-					<p>We are a passionate team of engineers, doctors and designers trying to create innovative products for the future, for the benefit of the people.</p>
-				</div>
-				<div class="footerColumn">
-					<h2>Contact:</h2>
-					<p>Email:</p>
-				</div>
-				<div class="footerColumn">
-					<h2>Details:</h2>
-					<p>ABN:</p>
-				</div>
+				<script>
+					$(function() {
+						$('#footer').load('footer.html');
+					})
+				</script>
 			</div>
 		</div>
 	</body>

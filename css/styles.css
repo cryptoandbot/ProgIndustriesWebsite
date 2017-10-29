@@ -3,6 +3,22 @@
  * desc: css stylings for general use throughout website
  */
 
+:root {
+	--progPurple: #2E294E;
+	--progDarkPurple: #011638;
+	--progViolet: #9055A2;
+	--progLightViolet: #D499B9;
+	--progRed: #bd1550;
+	--progOrange: #e97f02;
+	--progYellow: #f8ca00;
+	--progGrey: #333333;
+	--progLightGrey: #aaaaaa;
+	--progWhite: #dddddd;
+	--progPureWhite: #ffffff;
+	--progBlack: #111111;
+	--progPureBlack: #000000;
+}
+
 @import url("/css/normalize.css");
 
 @font-face {
@@ -41,6 +57,7 @@
 
 	#wrapper {
 		width: calc(100vw - 10px);
+		overflow-x: hidden;
 	}
 
 	::-webkit-scrollbar {
@@ -56,11 +73,13 @@
 	::-webkit-scrollbar-thumb {
 	    -webkit-border-radius: 0px;
 	    border-radius: 0px;
-	    background: rgba(40,40,150,0.8); 
+	    background: var(--progPurple);
+	    opacity: 0.9;
 	    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 	}
 	::-webkit-scrollbar-thumb:window-inactive {
-		background: rgba(40,40,150,0.4); 
+		opacity: 0.5;
+		background: var(--progPurple);
 	}
 
 	#header {
@@ -78,11 +97,16 @@
 		height: 100%;
 		font-family: "Rajdhani";
 		color: white;
-		font-size: 50px;
+		font-size: 48px;
 		margin-top: 25px;
-		padding-left: 50px;
+		padding-left: 2vw;
 		float: left;
 		transition: all 0.5s;
+	}
+
+	#headerLogo a {
+		text-decoration: none;
+		color: white;
 	}
 
 	#headerNav {
@@ -160,7 +184,7 @@
 	}
 
 	#headerButton i:hover {
-		color: rgba(40,40,150,1);
+		color: var(--progPurple);
 	}
 
 	#mainer {
@@ -247,16 +271,24 @@
 		color: white;
 		font-weight: bold;
 		font-size: 24px;
-		background-color: rgba(50, 50, 140, 0.8);
+		background-color: var(--progPurple);
+		opacity: 0.5;
 		transition: all 0.5s;
 		border-radius: 0px;
 		border: none;
 	}
 
 	#splashBoxButton button:hover {
-		background-color: rgba(50, 50, 140, 1);
+		background-color: var(--progPurple);
+		opacity: 0.9;
 		font-size: 28px;
 		border-radius: 10px;
+	}
+
+	#rocketImage {
+		height: 100px;
+		width: 100px;
+		transform: translate(100vw, 100vh);
 	}
 
 	#content {
@@ -274,6 +306,15 @@
 		padding-bottom: 25px; 
 		padding-left: 10vw;
 		padding-right: 10vw;
+		font-size: 0px;
+	}
+
+	.contentBlock h1 {
+		text-align: center;
+		margin-top: 0px;
+		font-size: 48px;
+		font-family: "Rajdhani";
+		font-weight: normal;
 	}
 
 	.contentTitle {
@@ -364,30 +405,30 @@
 	#statement {
 		width: calc(80% - 50px);
 		height: calc(70% - 50px);
+		margin-left: 10%;
 		font-family: "Source-LightItalic";
 		font-size: 3.5vw;
 		line-height: 72px;
 		color: #888888;
-		position: absolute;
-		padding: 25px;
-		
+		position: relative;
+		padding: 25px;		
 	}
 
 	#statementName {
 		width: calc(80% - 25px);
 		height: calc(20% - 25px);
-		margin-top: 25%;
+		margin-left: 10%;
 		padding-right: 25px;
 		padding-top: 20px;
+		margin-bottom: 25px;
 		font-family: "Rajdhani-Light";
 		text-align: right;
 		color: #333333;
 		font-size: 48px;
-		position: absolute;
+		position: relative;
 	}
 
 	.contentParallaxBackground {
-	    background-image: url("/images/dusk_starry_sky.jpg");
 	    height: 100%; 
 	    background-attachment: fixed;
 	    background-position: center;
@@ -488,4 +529,97 @@
 		color: white;
 		font-family: "Source";
 	}
+
+	#topBlock {
+		width: 100%;
+		height: 500px;
+		padding-top: 10%;
+		box-sizing: border-box;
+		box-shadow: 0 5px 50px #000000;
+	}
+
+	#topBlock h1 {
+		text-align: center;
+		font-family: "Rajdhani";
+		font-weight: normal;
+		font-size: 72px;
+		color: var(--progWhite);
+	}
+
+	#topBlock h2 {
+		text-align: center;
+		font-family: "Rajdhani-Light";
+		font-weight: normal;
+		font-size: 48px;
+		color: var(--progWhite);
+	}
+
+	.teamList {
+		min-height: 500px;
+	}
+
+	.teamBlock {
+		width: calc(100% / 3);
+		height: calc(30vw);
+		float: left;
+		padding: 1.25%;
+		box-sizing: border-box;
+		font-size: 0px;
+	}
+
+	.teamInner {
+		width: 95%;
+		height: 95%;
+		margin: 0 auto;
+		margin-top: 0;
+		font-size: 0px;
+		border: 1px solid var(--progGrey);
+		box-sizing: border-box;
+	}
+
+	.teamInner:hover .teamImage img {
+		height: 110%;
+	}
+
+	.teamImage {
+		width: 100%;
+		height: 75%;
+		display: inline-block;
+		overflow: hidden;
+	}
+
+	.teamImage img {
+		height: 100%;
+		align: middle;
+		margin-left: 50%;
+		transform: translateX(-50%);
+		transition: all 0.5s;
+	}
+
+	.teamContent {
+		width: 100%;
+		height: 25%;
+		max-height: 25%;
+		display: inline-block;
+		box-shadow: inset 0 5px 50px -20px #000000;
+	}
+
+	.teamContent h2 {
+		margin: 0px;
+		margin-top: 10px;
+		text-align: center;
+		font-family: "Rajdhani";
+		font-size: 2.25vw;
+		font-weight: normal;
+	}
+
+	.teamContent p {
+		margin: 0px;
+		margin-top: 5px;
+		text-align: center;
+		font-family: "Source-LightItalic";
+		font-size: 1.5vw;
+		font-weight: normal;
+	}
+
 }
