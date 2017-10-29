@@ -208,7 +208,7 @@
 		top: calc(100px + 12.5%);
 		left: 25%;
 		background-color: rgba(0, 0, 0, 0.8);
-		background: url("/images/pattern1.png");
+		background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/images/pattern1.png");
 		border-radius: 20px;
 		display: block;
 		position: absolute;
@@ -299,7 +299,6 @@
 
 	.contentBlock {
 		width: calc(100% - 20vw);
-		min-height: 300px;
 		display: block;
 		position: relative;
 		display: inline-block;
@@ -381,6 +380,15 @@
 		text-align: center;
 		margin-top: 0px;
 		font-size: 3.5vw;
+		font-family: "Rajdhani-Light";
+		font-weight: normal;
+		color: var(--progGrey);
+	}
+
+	.contentTextRight h2 {
+		text-align: center;
+		margin-top: -25px;
+		font-size: 2vw;
 		font-family: "Rajdhani-Light";
 		font-weight: normal;
 		color: var(--progGrey);
@@ -631,7 +639,7 @@
 
 	#scrollUp:hover {
 		opacity: 0.9;
-		bottom: -25px;
+		bottom: -50px;
 	}
 
 	#topBlock {
@@ -711,7 +719,7 @@
 
 	.teamContent h2 {
 		margin: 0px;
-		margin-top: 10px;
+		margin-top: 0.25vw;
 		text-align: center;
 		font-family: "Rajdhani";
 		font-size: 2.25vw;
@@ -720,7 +728,7 @@
 
 	.teamContent p {
 		margin: 0px;
-		margin-top: 5px;
+		margin-top: 0.25vw;
 		text-align: center;
 		font-family: "Source-LightItalic";
 		font-size: 1.5vw;
