@@ -173,7 +173,7 @@
 		float: left;
 	}
 
-	#headerButton i {
+	#headerButton a i {
 		font-size: 50px;
 		color: white;
 		margin-top: 25px;
@@ -183,7 +183,7 @@
 		cursor: pointer;
 	}
 
-	#headerButton i:hover {
+	#headerButton a i:hover {
 		color: var(--progPurple);
 	}
 
@@ -196,7 +196,8 @@
 		width: 100%;
 		height: 100vh;
 		position: static;
-		background: url("/images/distant_nebula.jpg");
+		background-image: url("/images/distant_nebula.jpg");
+		background-size: 100% 100%;
 		box-shadow: 0 5px 50px #000000;
 	}
 
@@ -231,7 +232,7 @@
 	#splashBoxHeader h1 {
 		font-family: "Rajdhani";
 		color: white;
-		font-size: 50px;
+		font-size: 4vw;
 		margin-top: 0px;
 		padding-top:  25px;
 		font-weight: normal;
@@ -246,7 +247,7 @@
 	#splashBoxText p {
 		font-family: "Source";
 		color: white;
-		font-size: 24px;
+		font-size: 1.5vw;
 		line-height: 40px;
 		margin-top: 0px;
 		padding-top: 30px;
@@ -276,6 +277,7 @@
 		transition: all 0.5s;
 		border-radius: 0px;
 		border: none;
+		cursor: pointer;
 	}
 
 	#splashBoxButton button:hover {
@@ -293,12 +295,11 @@
 
 	#content {
 		width: 100%;
-		min-height: 700px;
 	}
 
 	.contentBlock {
 		width: calc(100% - 20vw);
-		min-height: 500px;
+		min-height: 300px;
 		display: block;
 		position: relative;
 		display: inline-block;
@@ -307,14 +308,92 @@
 		padding-left: 10vw;
 		padding-right: 10vw;
 		font-size: 0px;
+		text-align: center;
+	}
+
+	.contentImage {
+		width: 100%;
+		margin-left: -10vw;
+		box-shadow: 0 5px 50px #000000;
+		padding-top: 0;
+		padding-bottom: 0;
 	}
 
 	.contentBlock h1 {
 		text-align: center;
 		margin-top: 0px;
-		font-size: 48px;
+		font-size: 3.5vw;
 		font-family: "Rajdhani";
 		font-weight: normal;
+		color: var(--progGrey);
+	}
+	.contentBlock h2 {
+		text-align: center;
+		margin-top: 0px;
+		font-size: 3.5vw;
+		font-family: "Rajdhani-Light";
+		font-weight: normal;
+		color: var(--progGrey);
+	}
+
+	.contentBlock p {
+		text-align: center;
+		margin-top: 2vw;
+		font-size: 2vw;
+		font-family: "Source";
+		font-weight: normal;
+		line-height: 48px;
+		color: var(--progGrey);
+	}
+
+	.contentBlock a {
+		text-align: center;
+		margin-top: 2vw;
+		font-size: 2vw;
+		font-family: "Source";
+		font-weight: normal;
+		color: var(--progPurple);
+		line-height: 48px;
+		text-decoration: underline;
+	}
+
+	.contentImageLeft {
+		width: 30%;
+		height: 30vw;
+		float: left;
+		overflow: hidden;
+	}
+
+	.contentImageLeft img {
+		height: 100%;
+	}
+
+	.contentTextRight {
+		width: 70%;
+		height: 30vw;
+		float: left;
+		background-color: var(--progWhite);
+		box-sizing: border-box;
+		padding: 25px;
+	}
+
+	.contentTextRight h1 {
+		text-align: center;
+		margin-top: 0px;
+		font-size: 3.5vw;
+		font-family: "Rajdhani-Light";
+		font-weight: normal;
+		color: var(--progGrey);
+	}
+
+	.contentTextRight p {
+		text-align: center;
+		margin-top: 2vw;
+		font-size: 2vw;
+		font-family: "Source";
+		font-weight: normal;
+		line-height: 48px;
+		color: var(--progGrey);
 	}
 
 	.contentTitle {
@@ -439,7 +518,7 @@
 	.contentParallaxBackground h1 {
 		text-align: center;
 		font-family: "Rajdhani";
-		font-size: 72px;
+		font-size: 5vw;
 		font-weight: normal;
 		color: #dddddd;
 	}
@@ -447,7 +526,7 @@
 	.contentParallaxBackground h2 {
 		text-align: center;
 		font-family: "Rajdhani-Light";
-		font-size: 48px;
+		font-size: 3.5vw;
 		color: #dddddd;
 	}
 
@@ -530,12 +609,38 @@
 		font-family: "Source";
 	}
 
+	#scrollUp {
+		width: 75px;
+		height: 100px;
+		bottom: -100px;
+		right: 50px;
+		position: fixed;
+		background-color: var(--progOrange);
+		z-index: 1;
+		text-align: center;
+		opacity: 0.5;
+		transition: all 0.5s;
+		cursor: pointer;
+	}
+
+	#scrollUp i {
+		font-size: 36px;
+		margin-top: 5px;
+		color: var(--progWhite);
+	}
+
+	#scrollUp:hover {
+		opacity: 0.9;
+		bottom: -25px;
+	}
+
 	#topBlock {
 		width: 100%;
 		height: 500px;
 		padding-top: 10%;
 		box-sizing: border-box;
 		box-shadow: 0 5px 50px #000000;
+		background-size: cover;
 	}
 
 	#topBlock h1 {

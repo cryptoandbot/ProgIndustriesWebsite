@@ -12,8 +12,9 @@ var headerSizer = function() {
 			$('.dropbtn').css('padding-top', '16px');
 			$('#headerLogo').css('font-size', '48px');
 			$('#headerLogo').css('margin-top', '25px');
-			$('#headerButton > i').css('font-size', '50px');
-			$('#headerButton > i').css('margin-top', '25px');
+			$('#headerButton > a > i').css('font-size', '50px');
+			$('#headerButton > a > i').css('margin-top', '25px');
+			$('#scrollUp').css('bottom', '-100px');
 		} else {
 			$('#header').css('height', '50px');
 			$('#header').css('background-color', 'rgba(0, 0, 0, 0.75)');
@@ -21,8 +22,9 @@ var headerSizer = function() {
 			$('.dropbtn').css('padding-top', '10px');
 			$('#headerLogo').css('font-size', '24px');
 			$('#headerLogo').css('margin-top', '12.5px');
-			$('#headerButton > i').css('font-size', '25px');
-			$('#headerButton > i').css('margin-top', '12.5px');
+			$('#headerButton > a > i').css('font-size', '25px');
+			$('#headerButton > a > i').css('margin-top', '12.5px');
+			$('#scrollUp').css('bottom', '-50px');
 		}
 	})
 }
@@ -49,3 +51,23 @@ var moveRocket = function() {
 }
 
 $(document).ready(moveRocket);
+
+var scrollToContent = function() {
+	$("#splashBoxButton > button").click(function() {
+		$('html, body').animate({
+			scrollTop: $('#content').offset().top - 50
+		}, 1000);
+	});
+}
+
+$(document).ready(scrollToContent);
+
+var scrollUpButton = function() {
+	$("#scrollUp").click(function() {
+		$('html, body').animate({
+			scrollTop: 0
+		}, 1000);
+	});
+}
+
+$(document).ready(scrollUpButton);

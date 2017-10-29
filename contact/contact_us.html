@@ -9,10 +9,14 @@ desc: contact form
 	<head>
 		<title>Prog Industries</title>
 		<script src="/js/jquery-3.2.1.min.js"></script>
-		<script src="/js/index.js"></script>
+		<script src="/js/index.js?v={random number/string}"></script>
 		<link rel="stylesheet" href="/css/normalize.css">
 		<link rel="stylesheet" href="/css/font-awesome-4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="/css/styles.css">
+		<link rel="stylesheet" href="/css/styles.css?v={random number/string}">
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="/favicon.ico" type="image/x-icon">
 	</head>
 	<body>
 		<div id="wrapper">
@@ -24,14 +28,22 @@ desc: contact form
 				</script>
 			</div>
 			<div id="mainer">
-				<div id="topBlock" style="background: url('/images/galaxy.jpg')">
+				<div id="topBlock" style="background-image: url('/images/galaxy.jpg')">
 					<h1>Contact Us</h1>
 					<h2>Please get in touch</h2>
 				</div>
 				<div id="content">
 					<div class="contentBlock">
+						<p>Feel free to send us a message at any time.</p>
+						<form>
+							<textarea id="message" name="messageContent" placeholder="Your message..."></textarea><br/>
+							<input id="submit" type="submit" value="Send">
+						</form>
 					</div>
 					<div class="contentBlock">
+						<h1>Contact Details</h1>
+						<p>Email: contact@progindustries.com</p>
+						<p>Address: PO Box</p>
 					</div>
 				</div>
 			</div>
