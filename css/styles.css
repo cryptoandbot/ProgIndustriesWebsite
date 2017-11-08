@@ -51,7 +51,7 @@
 	src: url("/fonts/Source_Sans_Pro/SourceSansPro-LightItalic.ttf");
 }
 
-@media (min-width: 800px) {	
+@media (max-width: 800px) {	
 	body {
 	}
 
@@ -184,7 +184,7 @@
 	}
 
 	#headerButton a i:hover {
-		color: var(--progPurple);
+		color: var(--progRed);
 	}
 
 	#mainer {
@@ -734,5 +734,691 @@
 		font-size: 1.5vw;
 		font-weight: normal;
 	}
+}
 
+/* DESKTOP VERSION
+ * when screen size if > 800px wide
+ */
+
+body {
+}
+
+#wrapper {
+	width: calc(100vw - 10px);
+	overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background: var(--progPurple);
+    opacity: 0.9;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	opacity: 0.5;
+	background: var(--progPurple);
+}
+
+#header {
+	width: 100%;
+	height: 100px;
+	background-color: rgba(255, 255, 255, 0.25);
+	position: fixed;
+	transition: all 0.5s;
+	z-index: 100;
+	box-shadow: 0 5px 50px #000000;
+}
+
+#headerLogo {
+	width: calc(50% - 50px);
+	height: 100%;
+	font-family: "Rajdhani";
+	color: white;
+	font-size: 48px;
+	margin-top: 25px;
+	padding-left: 2vw;
+	float: left;
+	transition: all 0.5s;
+}
+
+#headerLogo a {
+	text-decoration: none;
+	color: white;
+}
+
+#headerNav {
+	width: 40%;
+	height: 100%;
+	float: left;
+}
+
+.dropbtn {
+    background-color: rgba(0, 0, 0, 0);
+    font-family: "Source";
+    color: white;
+    width: calc(100vw / 8);
+    height: 100px;
+    padding: 16px;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    transition: all 0.5s;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: "Source";
+    font-size: 20px;
+    width: calc(100vw / 8);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    transition: all 0.5s;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    transition: all 0.5s;
+    display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: #f1f1f1;
+	opacity: 0.8;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+#headerButton {
+	width: 10%;
+	height: 100%;
+	float: left;
+}
+
+#headerButton a i {
+	font-size: 50px;
+	color: white;
+	margin-top: 25px;
+	margin-left: calc(100% / 4);
+	opacity: 0.8;
+	transition: all 0.5s;
+	cursor: pointer;
+}
+
+#headerButton a i:hover {
+	color: var(--progPurple);
+}
+
+#mainer {
+	width: 100%;
+	min-height: 800px;
+}
+
+#splash {
+	width: 100%;
+	height: 100vh;
+	position: static;
+	background-image: url("/images/distant_nebula.jpg");
+	background-size: 100% 100%;
+	box-shadow: 0 5px 50px #000000;
+}
+
+#splashBox {
+	z-index: 5;
+	width: 50%;
+	height: 50%;
+	top: calc(100px + 12.5%);
+	left: 25%;
+	background-color: rgba(0, 0, 0, 0.8);
+	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/images/pattern1.png");
+	border-radius: 20px;
+	display: block;
+	position: absolute;
+	box-shadow: 0 5px 50px #000000;
+}
+
+#splashBoxContent {
+	width: 80%;
+	height: 50%;
+	top: 10%;
+	left: 10%;
+	display: block;
+	position: absolute;
+}
+
+#splashBoxHeader {
+	width: 100%;
+	height: 50%;
+}
+
+#splashBoxHeader h1 {
+	font-family: "Rajdhani";
+	color: white;
+	font-size: 4vw;
+	margin-top: 0px;
+	padding-top:  25px;
+	font-weight: normal;
+	text-align: center;
+}
+
+#splashBoxText {
+	width: 100%;
+	height: 50%;
+}
+
+#splashBoxText p {
+	font-family: "Source";
+	color: white;
+	font-size: 1.5vw;
+	line-height: 40px;
+	margin-top: 0px;
+	padding-top: 30px;
+	text-align: center;
+}
+
+#splashBoxButton {
+	width: 80%;
+	height: 20%;
+	top: 70%;
+	left: 10%;
+	display: block;
+	position: absolute;
+	text-align: center;
+}
+
+#splashBoxButton button {
+	width: 50%;
+	height: 75%;
+	margin-top: 10px;
+	font-family: "Rajdhani";
+	color: white;
+	font-weight: bold;
+	font-size: 24px;
+	background-color: var(--progPurple);
+	opacity: 0.5;
+	transition: all 0.5s;
+	border-radius: 0px;
+	border: none;
+	cursor: pointer;
+}
+
+#splashBoxButton button:hover {
+	background-color: var(--progPurple);
+	opacity: 0.9;
+	font-size: 28px;
+	border-radius: 10px;
+}
+
+#rocketImage {
+	height: 100px;
+	width: 100px;
+	transform: translate(100vw, 100vh);
+}
+
+#content {
+	width: 100%;
+}
+
+.contentBlock {
+	width: calc(100% - 20vw);
+	display: block;
+	position: relative;
+	display: inline-block;
+	padding-top: 50px;
+	padding-bottom: 25px; 
+	padding-left: 10vw;
+	padding-right: 10vw;
+	font-size: 0px;
+	text-align: center;
+}
+
+.contentImage {
+	width: 100%;
+	margin-left: -10vw;
+	box-shadow: 0 5px 50px #000000;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.contentBlock h1 {
+	text-align: center;
+	margin-top: 0px;
+	font-size: 3.5vw;
+	font-family: "Rajdhani";
+	font-weight: normal;
+	color: var(--progGrey);
+}
+.contentBlock h2 {
+	text-align: center;
+	margin-top: 0px;
+	font-size: 3.5vw;
+	font-family: "Rajdhani-Light";
+	font-weight: normal;
+	color: var(--progGrey);
+}
+
+.contentBlock p {
+	text-align: center;
+	margin-top: 2vw;
+	font-size: 2vw;
+	font-family: "Source";
+	font-weight: normal;
+	line-height: 48px;
+	color: var(--progGrey);
+}
+
+.contentBlock a {
+	text-align: center;
+	margin-top: 2vw;
+	font-size: 2vw;
+	font-family: "Source";
+	font-weight: normal;
+	color: var(--progPurple);
+	line-height: 48px;
+	text-decoration: underline;
+}
+
+.contentImageLeft {
+	width: 30%;
+	height: 30vw;
+	float: left;
+	overflow: hidden;
+}
+
+.contentImageLeft img {
+	height: 100%;
+}
+
+.contentTextRight {
+	width: 70%;
+	height: 30vw;
+	float: left;
+	background-color: var(--progWhite);
+	box-sizing: border-box;
+	padding: 25px;
+}
+
+.contentTextRight h1 {
+	text-align: center;
+	margin-top: 0px;
+	font-size: 3.5vw;
+	font-family: "Rajdhani-Light";
+	font-weight: normal;
+	color: var(--progGrey);
+}
+
+.contentTextRight h2 {
+	text-align: center;
+	margin-top: -25px;
+	font-size: 2vw;
+	font-family: "Rajdhani-Light";
+	font-weight: normal;
+	color: var(--progGrey);
+}
+
+.contentTextRight p {
+	text-align: center;
+	margin-top: 2vw;
+	font-size: 2vw;
+	font-family: "Source";
+	font-weight: normal;
+	line-height: 48px;
+	color: var(--progGrey);
+}
+
+.contentTitle {
+	width: 100%;
+	height: 100px;
+	text-align: center;
+	font-family: "Rajdhani";
+	font-size: 72px;
+	color: #333333;
+}
+
+.contentBubbleBlock {
+	width: 100%;
+	height: 500px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.contentBubble {
+	width: calc(100% / 3 - 5%);
+	height: 45%;
+	padding: 2.5%;
+	float: left;
+}
+
+.contentBubbleInside {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.contentBubbleInside i {
+	margin-top: 20px;
+	font-size: 72px;
+	text-shadow: 2px 2px 10px #333333;
+	color: #333333;
+}
+
+.contentBubbleInside p {
+	text-align: center;
+	font-family: "Source";
+	color: #333333;
+	font-size: 24px;
+}
+
+.callToAction {
+	box-shadow: 0 5px 50px #000000;
+	width: 100%;
+	height: 600px;
+	padding: 0;
+}
+
+#callToActionLarge {
+	width: 65%;
+	height: 100%;
+	position: absolute;
+	background: url('/images/galaxy_thin.jpg');
+}
+
+#callToActionSmall {
+	width: calc(35% - 50px);
+	height: calc(100% - 50px);
+	margin-left: 65%;
+	position: absolute;
+	background-color: #eeeeee;
+	padding: 25px;
+}
+
+#callToActionSmall h1 {
+	width: 100%;
+	text-align: center;
+	font-family: "Rajdhani";
+	color: #333333;
+	font-weight: normal;
+	font-size: 48px;
+}
+
+#callToActionSmall p {
+	width: 100%;
+	margin-top: 25px;
+	text-align: center;
+	font-family: "Source";
+	color: #333333;
+	font-size: 2vw;
+	line-height: 48px;
+}
+
+#statement {
+	width: calc(80% - 50px);
+	height: calc(70% - 50px);
+	margin-left: 10%;
+	font-family: "Source-LightItalic";
+	font-size: 3.5vw;
+	line-height: 72px;
+	color: #888888;
+	position: relative;
+	padding: 25px;		
+}
+
+#statementName {
+	width: calc(80% - 25px);
+	height: calc(20% - 25px);
+	margin-left: 10%;
+	padding-right: 25px;
+	padding-top: 20px;
+	margin-bottom: 25px;
+	font-family: "Rajdhani-Light";
+	text-align: right;
+	color: #333333;
+	font-size: 48px;
+	position: relative;
+}
+
+.contentParallaxBackground {
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contentParallaxBackground h1 {
+	text-align: center;
+	font-family: "Rajdhani";
+	font-size: 5vw;
+	font-weight: normal;
+	color: #dddddd;
+}
+
+.contentParallaxBackground h2 {
+	text-align: center;
+	font-family: "Rajdhani-Light";
+	font-size: 3.5vw;
+	color: #dddddd;
+}
+
+.contactBlock {
+
+}
+
+.contactBlock h1 {
+	text-align: center;
+	font-family: "Rajdhani";
+	font-size: 72px;
+	font-weight: normal;
+	color: #333333;
+}
+
+.contactBlock p {
+	text-align: left;
+	font-family: "Rajdhani-Light";
+	font-size: 28px;
+	color: #333333;
+}
+
+#message {
+	width: 100%;
+	min-height: 200px;
+	font-family: "Source";
+	font-size: 18px;
+	font-weight: normal;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+#submit {
+	width: 20%;
+	height: 50px;
+	margin-top: 10px;
+	font-family: "Rajdhani";
+	color: white;
+	font-weight: bold;
+	font-size: 24px;
+	background-color: rgba(50, 50, 140, 0.8);
+	transition: all 0.5s;
+	border-radius: 0px;
+	border: none;
+}
+
+#submit:hover {
+	background-color: rgba(50, 50, 140, 1);
+	font-size: 28px;
+	border-radius: 10px;
+}
+
+#footer {
+	width: 100%;
+	height: 400px;
+	position: relative;
+}
+
+.footerColumn {
+	width: calc(100% / 3 - 50px);
+	height: calc(100% - 50px);
+	background-color: black;
+	float: left;
+	padding: 25px;
+}
+
+.footerColumn h2 {
+	color: white;
+	font-family: "Rajdhani";
+	font-weight: normal;
+}
+
+.footerColumn p {
+	color: white;
+	font-family: "Source";
+}
+
+#scrollUp {
+	width: 75px;
+	height: 100px;
+	bottom: -100px;
+	right: 50px;
+	position: fixed;
+	background-color: var(--progOrange);
+	z-index: 1;
+	text-align: center;
+	opacity: 0.5;
+	transition: all 0.5s;
+	cursor: pointer;
+}
+
+#scrollUp i {
+	font-size: 36px;
+	margin-top: 5px;
+	color: var(--progWhite);
+}
+
+#scrollUp:hover {
+	opacity: 0.9;
+	bottom: -50px;
+}
+
+#topBlock {
+	width: 100%;
+	height: 500px;
+	padding-top: 10%;
+	box-sizing: border-box;
+	box-shadow: 0 5px 50px #000000;
+	background-size: cover;
+}
+
+#topBlock h1 {
+	text-align: center;
+	font-family: "Rajdhani";
+	font-weight: normal;
+	font-size: 72px;
+	color: var(--progWhite);
+}
+
+#topBlock h2 {
+	text-align: center;
+	font-family: "Rajdhani-Light";
+	font-weight: normal;
+	font-size: 48px;
+	color: var(--progWhite);
+}
+
+.teamList {
+	min-height: 500px;
+}
+
+.teamBlock {
+	width: calc(100% / 3);
+	height: calc(30vw);
+	float: left;
+	padding: 1.25%;
+	box-sizing: border-box;
+	font-size: 0px;
+}
+
+.teamInner {
+	width: 95%;
+	height: 95%;
+	margin: 0 auto;
+	margin-top: 0;
+	font-size: 0px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.teamInner:hover .teamImage img {
+	width: 110%;
+}
+
+.teamImage {
+	width: 100%;
+	height: 75%;
+	display: inline-block;
+	overflow: hidden;
+	box-shadow: 0 5px 50px -15px #000000;
+}
+
+.teamImage img {
+	width: 100%;
+	align: middle;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	transition: all 0.5s;
+}
+
+.teamContent {
+	width: 100%;
+	height: 25%;
+	max-height: 25%;
+	display: inline-block;
+}
+
+.teamContent h2 {
+	margin: 0px;
+	margin-top: 0.25vw;
+	text-align: center;
+	font-family: "Rajdhani";
+	font-size: 2.25vw;
+	font-weight: normal;
+}
+
+.teamContent p {
+	margin: 0px;
+	margin-top: 0.25vw;
+	text-align: center;
+	font-family: "Source-LightItalic";
+	font-size: 1.5vw;
+	font-weight: normal;
 }
